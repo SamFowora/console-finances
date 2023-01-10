@@ -86,3 +86,16 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+console.log("Financial Analysis")
+console.log("............................")
+
+// defining the array
+const dates = [];
+const finVal = [];
+
+// 
+
+// total months
+let allMonths = dates.length;
+console.log("Total Months: " + allMonths)
