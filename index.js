@@ -90,12 +90,3 @@ var finances = [
 console.log("Financial Analysis")
 console.log("............................")
 
-// defining the array
-const dates = [];
-const finVal = [];
-
-// 
-
-// total months
-let allMonths = dates.length;
-console.log("Total Months: " + allMonths)
