@@ -13,7 +13,7 @@ N/A
 
 ## Usage
 
-Opening the console log will display the financial overview
+Opening devtools will display the financial overview
 
 ## Credits
 
