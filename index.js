@@ -123,10 +123,10 @@ console.log(`Average Change: ${avgChange}`);
 avgChange = (totalChange / change.length).toFixed(2);
 
 // working out greatest profits & losses
-var greatestIncrease = Math.max(change);
-var greatestDecrease = Math.max(change);
+var greatestIncrease = Math.max(...change);
+var greatestDecrease = Math.min(...change);
 var greatestProfits = change.indexOf(greatestIncrease) + 1 ;
 var greatestLosses = change.indexOf(greatestDecrease) + 1 ;
 
 console.log(`Greatest Increase in Profits: ${finances[greatestProfits][0]} $${greatestIncrease}`);
-console.log(`Greatest Decrease in Profits: ${finances[greatestLosses][0]} $${greatestLosses}`);
+console.log(`Greatest Decrease in Profits: ${finances[greatestLosses][0]} $${greatestDecrease}`);
