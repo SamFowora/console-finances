@@ -88,5 +88,45 @@ var finances = [
 ];
 
 console.log("Financial Analysis")
-console.log("............................")
+console.log("............................");
 
+// working out the months
+var totalMonths = finances.length;
+
+console.log(`Total Months: ${totalMonths}`);
+
+// variables
+var totalAmount = 0;
+var totalChange = 0;
+var avgChange = 0;
+
+// working out the total amount
+for (let i = 0; i < finances.length; i++) {
+totalAmount += finances[i][1];
+}
+
+console.log(`Total Amount: ${totalAmount}`);
+
+// working out the average change
+var change = [];
+
+for (let i = 0; i < finances.length -1; i++) {
+    change.push(finances[i + 1][1] - finances[i][1]);
+    totalChange += change[i] ;
+}
+
+avgChange = (totalChange / change.length).toFixed(2);
+
+console.log(`Average Change: ${avgChange}`);
+
+// working out change from the profits & losses
+avgChange = (totalChange / change.length).toFixed(2);
+
+// working out greatest profits & losses
+var greatestIncrease = Math.max(change);
+var greatestDecrease = Math.max(change);
+var greatestProfits = change.indexOf(greatestIncrease) + 1 ;
+var greatestLosses = change.indexOf(greatestDecrease) + 1 ;
+
+console.log(`Greatest Increase in Profits: ${finances[greatestProfits][0]} $${greatestIncrease}`);
+console.log(`Greatest Decrease in Profits: ${finances[greatestLosses][0]} $${greatestLosses}`);
